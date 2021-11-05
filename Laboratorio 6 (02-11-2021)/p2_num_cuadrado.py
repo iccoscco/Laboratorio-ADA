@@ -15,3 +15,6 @@ def sqrtBinary(number):
             R = mid - 1
     return -1
 
+# Casos de prueba
+print(sqrtBinary(64))
+print(sqrtBinary(79))
