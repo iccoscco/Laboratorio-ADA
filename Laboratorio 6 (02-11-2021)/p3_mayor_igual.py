@@ -17,3 +17,8 @@ def mayorIgualtBinary(array,number):
         aux = array[mid]
 
     return aux
+
+# Casos de prueba
+array = [2,3,5,6,8,10,12]
+print(mayorIgualtBinary(array,7))
+print(mayorIgualtBinary(array,11))
