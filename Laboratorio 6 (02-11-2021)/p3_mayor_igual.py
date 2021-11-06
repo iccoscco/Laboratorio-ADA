@@ -1,5 +1,5 @@
 # Problema 3:
-def mayorIgualtBinary(array,number):
+def mayorIgualBinary(array,number):
     # Encuentre el primer mayor o igual a x
     N = len(array)
     L = 0
