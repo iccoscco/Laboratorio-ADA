@@ -23,3 +23,8 @@ def reverse_polish_notation(cadena):
             pila.append(int(value))
     print(pila)
  
+
+# Casos de prueba
+reverse_polish_notation("2 1 + 3 *")   
+reverse_polish_notation("4 13 5 / +")  
+reverse_polish_notation("10 6 9 3 + -11 * / * 17 + 5 +")  
