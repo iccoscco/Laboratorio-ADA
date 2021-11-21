@@ -16,4 +16,8 @@ def minimun_size_valid(cadena):
             pila.append(cadena[i])
     print(len(pila))
 
-
+# Casos de prueba
+minimun_size_valid("())")
+minimun_size_valid("(()))(")
+minimun_size_valid("(((")
+minimun_size_valid("()))((")
