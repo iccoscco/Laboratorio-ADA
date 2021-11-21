@@ -5,6 +5,7 @@ def caps_lock(cadena):
     # => $ -> bufer liberado  
     # => @ -> cambio de case
     cola = collections.deque([])
+    colaPrint = collections.deque([])
     entrada = 1
     for i in range(len(cadena)):
         if len(cadena) == 0:
@@ -14,8 +15,7 @@ def caps_lock(cadena):
                 # Vaciar cola
                 size = len(cola)
                 for i in range(size):
-                    print(cola.popleft(),end=" ")
-                        
+                    colaPrint.append(cola.popleft())
             else: 
                 # Cambio de case
                 if cadena[i] == "@":
@@ -31,9 +31,11 @@ def caps_lock(cadena):
                         cola[m] = cola[m].upper()
                     cola.append(cadena[i].upper())
         
-        # Eliminación de arroba
-        if cadena[i] == "@":
-            cola.popleft()    
+       
+    # Print sin arroba 
+    for i in range(len(colaPrint)):
+        if colaPrint[i] != "@":
+            print(colaPrint[i],end=" ")
                 
                     
             
