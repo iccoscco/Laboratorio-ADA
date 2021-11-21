@@ -4,25 +4,22 @@ def reverse_polish_notation(cadena):
     pila = []
     arrayCad = cadena.split(" ")
 
-    for i in range(arrayCad):
+    for i in range(len(arrayCad)):
         if arrayCad[i] != "+" and arrayCad[i] != "-" and arrayCad[i] != "*" and arrayCad[i] != "/":
-            
-        # else:
-        #     n1 = pila.pop()
-        #     n2 = pila.pop()
-        #     value = 0;
-        #     # Revisamos que operación hacer
-        #     if auxCad[i] == "+":
-        #         value = n1 + n2
-        #     if auxCad[i] == "-":
-        #         value = n1 - n2
-        #     if auxCad[i] == "*":
-        #         value = n1 * n2
-        #     if auxCad[i] == "/":
-        #         value = n1 / n2
-        #     pila.append(value)
+            pila.append(int(arrayCad[i]))
+        else:
+            n2 = pila.pop()
+            n1 = pila.pop()
+            value = 0;
+            # Revisamos que operación hacer
+            if arrayCad[i] == "+":
+                value = n1 + n2
+            if arrayCad[i] == "-":
+                value = n1 - n2
+            if arrayCad[i] == "*":
+                value = n1 * n2
+            if arrayCad[i] == "/":
+                value = n1 / n2
+            pila.append(int(value))
     print(pila)
-
-reverse_polish_notation("2 1 5 3 *")   
-# reverse_polish_notation("2 1 + 3 *")   
-# reverse_polish_notation("4 13 5 / +")   
+ 
