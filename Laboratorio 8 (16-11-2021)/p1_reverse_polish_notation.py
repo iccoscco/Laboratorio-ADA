@@ -2,9 +2,10 @@
 def reverse_polish_notation(cadena):
     # Evaluar la reversión polaca inversa
     pila = []
-    arrayCad = cadena.split(" ")
+    arrayCad = cadena.split(" ") # Transformación de cadena en array
 
     for i in range(len(arrayCad)):
+        # Verificación de que elemento se está mandando
         if arrayCad[i] != "+" and arrayCad[i] != "-" and arrayCad[i] != "*" and arrayCad[i] != "/":
             pila.append(int(arrayCad[i]))
         else:
